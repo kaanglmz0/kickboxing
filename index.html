@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick Boks Kulübü</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8d1111;
+            color: #333;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #e8491d;
+            color: #fff;
+        }
+        
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #555;
+        }
+        
+        .page-content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .event-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .page-navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .page-navigation button {
+            background-color: #e8491d;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .page-navigation button:hover {
+            background-color: #ff5a2b;
+        }
+        
+        .registration-form,
+        .training-module,
+        .about-page-content {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .registration-form label,
+        .training-module h4 {
+            margin-bottom: 12px;
+            display: block;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .registration-form input,
+        .registration-form textarea,
+        .registration-form select,
+        .training-module iframe {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #555;
+        }
+        
+        .registration-form button,
+        .training-module button {
+            background-color: #e8491d;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .registration-form button:hover,
+        .training-module button:hover {
+            background-color: #ff5a2b;
+        }
+        
+        .confirmation-message {
+            margin-top: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Kick Boks Kulübü</h1>
+    </header>
+
+    <nav>
+        <a href="#about">Hakkında</a>
+        <a href="#training">Antrenmanlar</a>
+        <a href="#techniques">Teknikler</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#videos">Videolar</a>
+        <a href="#events">Etkinlikler</a>
+        <a href="#contact">İletişim</a>
+    </nav>
+
+    <div class="page-navigation">
+        <button onclick="showPage('about')">Hakkında</button>
+        <button onclick="showPage('training')">Antrenmanlar</button>
+        <button onclick="showPage('techniques')">Teknikler</button>
+        <button onclick="showPage('gallery')">Galeri</button>
+        <button onclick="showPage('videos')">Videolar</button>
+        <button onclick="showPage('events')">Etkinlikler</button>
+        <button onclick="showPage('contact')">İletişim</button>
+    </div>
+
+    <div class="page-content">
+        <section id="about" class="about-page-content">
+            <h2>Hakkımızda</h2>
+            <p>Kick Boks Kulübü, sporun güzelliklerini ve heyecanını yaşamayı amaçlayan bir topluluktur. 2005 yılında kurulan kulübümüz, o günden bu yana birçok başarıya imza atmıştır.</p>
+            <p>Kulübümüzde, başlangıç seviyesinden uzman seviyesine kadar her seviyede sporcu için eğitim programları sunuyoruz. Ayrıca, rekabetçi düzeyde kick boks turnuvalarına katılan birçok sporcu yetiştirdik.</p>
+            <p>Hedefimiz, sporun birleştirici gücünü kullanarak insanları bir araya getirmek ve sağlıklı bir yaşam tarzını teşvik etmektir.</p>
+        </section>
+
+        <section id="training">
+            <h2>Antrenmanlar</h2>
+            <p>Kick boks antrenmanları, dayanıklılık, güç ve esnekliği artırmayı hedefler. Ayrıca, temel tekme ve yumruk tekniklerini öğrenmek için yapılan antrenmanlar da bulunmaktadır.</p>
+            <p>Ayak çalışması: 30 dakika-1 saat yapılır. Koşarak yavaş yavaş ısınır ve direncinizi artırmak için nefesinizi kontrol altına alırsını </p>
+            <p> Isınma: 30 dakika. Birkaç egzersizle tüm kaslarınızı çalıştırmaya başlarsınız. Her set arasında dinlenmeniz gerekir. Boksta hem alt hem de üst vücut çalışır.</p>
+            <p> Kum torbası ve hız topu: 30 dakika-1 saat.</p>
+            <p> Tekniğiniz üzerinde çalışmak için hareketler: 30 dakika</p>
+            <p> Gölge çalışması: 30 dakika</p>
+            <p>Kuvvet antrenmanı ve fiziksel çalışmalar: 30 dakika-1 saat. Bacak ve karın egzersizleri, squat, ağırlık kaldırma, bench press...</p>
+            <p> Esneme ve karın: 30 dakika. Antrenman sonunda karın antrenmanı yaparak hem daha hızlı şekle girersiniz hem de daha çok kalori yakarsınız. Esnemeyi kesinlikle es geçmeyin!</p>
+        </section>
+
+        <section id="techniques">
+            <h2>Teknikler</h2>
+            <p>Kick boksun temel teknikleri arasında jab, cross, low kick, high kick gibi birçok teknik bulunmaktadır. Tekniklerin doğru bir şekilde öğrenilmesi ve uygulanması önemlidir.</p>
+
+            <div class="training-module">
+                <h4>Temel Teknikler Eğitimi</h4>
+                <p>Bu eğitimde kick boksun temel tekniklerini öğreneceksiniz.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_TECHNIQUES" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </section>
+
+        <section id="gallery">
+            <h2>Galeri</h2>
+            <img src="images.jpg" alt="Galeri Resmi 1">
+            <img src="indir (1).jpg" alt="Galeri Resmi 2">
+
+        </section>
+
+        <section id="videos">
+            <h2>Videolar</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+
+        </section>
+
+        <section id="events">
+            <h2>Etkinlikler</h2>
+
+            <div class="event-item">
+                <h3>Kick Boks Turnuvası</h3>
+                <p>Tarih: 10 Mayıs 2023</p>
+                <p>Yer: Spor Merkezi</p>
+                <p>Ankara Mamak </p>
+                <div class="registration-form">
+                    <h4>Katılım İçin Kayıt Ol</h4>
+                    <form id="registration-form" onsubmit="submitForm(event)">
+                        <label for="participant-name">Adınız:</label>
+                        <input type="text" id="participant-name" name="participant-name" required>
+
+                        <label for="participant-email">E-posta Adresiniz:</label>
+                        <input type="email" id="participant-email" name="participant-email" required>
+
+                        <label for="event-selection">Katılmak İstediğiniz Etkinlik:</label>
+                        <select id="event-selection" name="event-selection" required>
+                            <option value="kickboxing-tournament">Kick Boks Turnuvası</option>
+                            <option value="training-camp">Antrenman Kampı</option>
+                          
+                        </select>
+
+                        <button type="submit">Kayıt Ol</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contact">
+            <h2>İletişim</h2>
+            <p>Bizimle iletişime geçmek için aşağıdaki formu kullanabilirsiniz.</p>
+            <div class="registration-form">
+                <h4>Bize Ulaşın</h4>
+                <form id="contact-form">
+                    <label for="name">Adınız:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">E-posta Adresiniz:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mesajınız:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Gönder</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Kick Boks Kulübü</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+
+            var pages = document.querySelectorAll('.page-content > section');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+
+
+            var selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.style.display = 'block';
+            }
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+
+
+            var name = document.getElementById('participant-name').value;
+            var email = document.getElementById('participant-email').value;
+            var selectedEvent = document.getElementById('event-selection').value;
+
+
+            document.getElementById('confirmation-message').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
